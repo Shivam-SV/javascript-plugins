@@ -1,0 +1,17 @@
+.tooltip{
+    position: relative;
+}
+
+.tooltip:hover::before{
+    display: block;
+}
+
+.tooltip::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: white;
+    z-index: 1;
+    padding: 5px;
+    box-shadow: 1px 1px 3px 1px #0000004f;
+    display: none;
+}
