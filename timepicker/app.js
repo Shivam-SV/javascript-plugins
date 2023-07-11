@@ -33,24 +33,24 @@ const ce = (element) => {
 };
 // create 2 select box
 
-if (userFormat.match(/h/gi).length > 0) {
+// if (userFormat.match(/h/gi).length > 0) {
   var hoursElement = ce("select");
   hoursElement.classList.add(`${prefix}hours`);
   hoursElement.append(...populateoptions(HourLimit));
   hoursElement.onchange = handleChange;
-}
-if (userFormat.match(/m/gi).length > 0) {
+// }
+// if (userFormat.match(/m/gi).length > 0) {
   var minutesElement = ce("select");
   minutesElement.classList.add(`${prefix}minutes`);
   minutesElement.append(...populateoptions(minutesLimit));
   minutesElement.onchange = handleChange;
-}
-if (userFormat.match(/s/gi).length > 0) {
+// }
+// if (userFormat.match(/s/gi).length > 0) {
   var secondElement = ce("select");
   secondElement.classList.add(`${prefix}second`);
   secondElement.append(...populateoptions(secondLimit));
   secondElement.onchange = handleChange;
-}
+// }
 
 var spy = ce("input");
 spy.type = "hidden";
